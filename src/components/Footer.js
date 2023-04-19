@@ -12,7 +12,15 @@ const Footer = () => {
             rel="#"
             href="https://www.linkedin.com/in/abed-jamous-28296826b/"
           >
-            Abed Jamous.
+            Abed Jamous,
+          </a>
+          <a
+            className="footerLinks"
+            target="_blank"
+            rel="#"
+            href="https://www.linkedin.com/in/cory-ritz-43775a26b/"
+          >
+            Cory Ritz.
           </a>
         </p>
       </div>
