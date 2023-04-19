@@ -1,6 +1,11 @@
-import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReactDOM from "react-dom/client";
 import React from "react";
-const App = () => {
-  return <h1>This is my React app!</h1>;
-};
-ReactDOM.render(<App />, document.getElementById("app"));
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
