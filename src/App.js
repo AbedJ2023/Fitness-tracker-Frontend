@@ -7,7 +7,15 @@ import {
   useNavigate,
 } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Activities, Home, Login, NavBar, Register } from "./components";
+import {
+  Activities,
+  Footer,
+  Home,
+  Login,
+  NavBar,
+  Register,
+  Routines,
+} from "./components";
 import { getUserDetails } from "./api";
 
 const App = () => {
@@ -55,7 +63,12 @@ const App = () => {
           />
           <Route path="/login" element={<Login setToken={setToken} />} />
           <Route path="/Register" element={<Register setToken={setToken} />} />
+          <Route
+            path="/Routines"
+            element={<Routines routines={routines} setRoutines={setRoutines} />}
+          />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
