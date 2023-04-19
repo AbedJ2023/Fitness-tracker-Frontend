@@ -8,9 +8,13 @@ const Home = ({ token }) => {
       {token ? (
         <>
           <p> Let's get to work! </p>
-          <div>
-            <Link to="/=">View your routines</Link>
-            <Link to="/">Checkout workout options</Link>
+          <div id="inline-options">
+            <Link to="/MyRoutines=" id="view-routine">
+              View your routines
+            </Link>
+            <Link to="/Activities" id="view-all-routines">
+              Checkout workout options
+            </Link>
           </div>
         </>
       ) : (

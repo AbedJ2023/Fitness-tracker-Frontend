@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ token }) => {
-  const handleLogOut = (cb) => {
-    localStorage.removeItem("JWT");
-    cb();
-  };
-
+const NavBar = ({ logout, token }) => {
   return (
     <header>
       <nav className="nav">
@@ -15,7 +10,7 @@ const NavBar = ({ token }) => {
         <Link to="/Routines">Public Routines</Link>
         {token ? <Link to="/MyRoutines">My Routines</Link> : null}
         {token ? (
-          <Link to="/" onClick={handleLogOut}>
+          <Link to="/" onClick={() => logout()}>
             Log Out
           </Link>
         ) : (

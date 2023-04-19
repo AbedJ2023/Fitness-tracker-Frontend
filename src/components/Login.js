@@ -12,10 +12,11 @@ const LoginUser = ({ setToken }) => {
 
   const handleSubmit = async () => {
     const results = await loginUser(username, password);
+    window.localStorage.setItem("token", results.token);
 
-    if (results.success) {
-      setToken(results.data.token);
-      window.localStorage.setItem("token", results.data.token);
+    if (results.token) {
+      setToken(results.token);
+
       navigate("/Activities");
     } else {
       setUsername("");
@@ -40,7 +41,7 @@ const LoginUser = ({ setToken }) => {
           handleSubmit();
         }}
       >
-        <h3>Welcome to Stranger's Things</h3>
+        <h3>Welcome to Fitness Tracker</h3>
 
         <label className="login-label" htmlFor="username">
           Username
@@ -71,7 +72,7 @@ const LoginUser = ({ setToken }) => {
         </button>
         <div className="signup">
           <div>Don't have an account? </div>
-          <Link to="/signUp" className="signUpLink">
+          <Link to="/Register" className="signUpLink">
             SIGN UP HERE
           </Link>
         </div>
