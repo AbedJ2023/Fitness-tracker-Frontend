@@ -16,7 +16,6 @@ import {
   Register,
   Routines,
 } from "./components";
-import { getUserDetails } from "./api";
 
 const App = () => {
   const [token, setToken] = useState("");
